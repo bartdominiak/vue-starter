@@ -7,6 +7,7 @@ This is an example webpack configuration for project kickoff
 * Seperated webpack loaders and plugins
 * JS, Vue, SVG, SCSS Support
 * Base styles like `_variables.scss` and `_mixins.scss` are available in all components
+* Eslint with config
 
 ## Folder Structure
 ```

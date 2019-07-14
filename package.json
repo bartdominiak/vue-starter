@@ -4,7 +4,8 @@
   },
   "scripts": {
     "dev": "webpack-dev-server --config ./config --env dev",
-    "build": "webpack --config ./config --env prod"
+    "build": "webpack --config ./config --env prod",
+    "lint": "eslint 'src/**/*.{js,vue}'"
   },
   "dependencies": {
     "vue": "^2.6.10",
@@ -12,22 +13,28 @@
     "webpack-merge": "^4.2.1"
   },
   "devDependencies": {
-    "webpack-cli": "^3.3.6",
-    "webpack-dev-server": "^3.7.2",
     "@babel/core": "^7.5.4",
     "@babel/plugin-syntax-dynamic-import": "^7.2.0",
     "@babel/preset-env": "^7.5.4",
+    "babel-eslint": "^10.0.2",
     "babel-loader": "^8.0.6",
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.0.0",
+    "eslint": "^6.0.1",
+    "eslint-loader": "^2.2.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-vue": "^5.2.3",
     "html-webpack-plugin": "^3.2.0",
     "node-sass": "^4.12.0",
     "normalize-scss": "^7.0.1",
     "sass-loader": "^7.1.0",
     "sass-resources-loader": "^2.0.1",
+    "vue-eslint-parser": "^6.0.4",
     "vue-loader": "^15.7.0",
     "vue-style-loader": "^4.1.2",
     "vue-svg-loader": "^0.12.0",
-    "vue-template-compiler": "^2.6.10"
+    "vue-template-compiler": "^2.6.10",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.7.2"
   }
 }
