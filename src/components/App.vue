@@ -1,15 +1,19 @@
 <template>
   <div>
-    <icon icon-id="arrow-right" />
+    <AppButton>
+      <AppIcon icon-id="arrow-right" />
+    </AppButton>
   </div>
 </template>
 
 <script>
-import Icon from '@/components/Icon.vue'
+import AppIcon from '@/components/AppIcon.vue'
+import AppButton from '@/components/AppButton.vue'
 
 export default {
   components: {
-    Icon
+    AppIcon,
+    AppButton
   }
 }
 </script>
