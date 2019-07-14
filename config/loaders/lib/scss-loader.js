@@ -14,6 +14,18 @@ const scssLoader = (isDev) => {
         }
       },
       {
+        loader: 'postcss-loader',
+        options: {
+          sourceMap: isDev,
+          plugins: [
+            require('postcss-import')(),
+            require('postcss-url')(),
+            require('postcss-preset-env')()
+          ],
+          order: 'presetEnvAndCssnanoLast'
+        }
+      },
+      {
         loader: 'sass-loader',
         options: {
           sourceMap: isDev,
