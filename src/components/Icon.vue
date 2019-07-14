@@ -1,5 +1,8 @@
 <template>
-  <component class="icon" :is="IconSVG" />
+  <component
+    :is="IconSVG"
+    class="icon"
+  />
 </template>
 
 <script>
