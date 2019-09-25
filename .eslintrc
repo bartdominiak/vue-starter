@@ -1,25 +1,30 @@
 {
-    "parser": "vue-eslint-parser",
-    "parserOptions": {
-      "parser": "babel-eslint",
-      "ecmaVersion": 8,
-      "sourceType": "module"
-    },
-    "extends": [
-      "eslint:recommended",
-      "plugin:vue/recommended"
-    ],
-    "plugins": [
-      "vue"
-    ],
-    "rules": {
-        "vue/require-component-is": 0,
-        "vue/no-v-html": 1,
-        "vue/html-closing-bracket-newline": [
-            "error", {
-                "singleline": "never",
-                "multiline": "always"
-            }
-        ]
-    }
+  "env": {
+    "browser": true,
+    "amd": true,
+    "node": true
+  },
+  "parser": "vue-eslint-parser",
+  "parserOptions": {
+    "parser": "babel-eslint",
+    "ecmaVersion": 8,
+    "sourceType": "module"
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:vue/recommended"
+  ],
+  "plugins": [
+    "vue"
+  ],
+  "rules": {
+    "vue/require-component-is": 0,
+    "vue/no-v-html": 1,
+    "vue/html-closing-bracket-newline": [
+      "error", {
+        "singleline": "never",
+        "multiline": "always"
+      }
+    ]
+  }
 }
