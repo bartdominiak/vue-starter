@@ -29,9 +29,11 @@ const scssLoader = (isDev) => {
         loader: 'sass-loader',
         options: {
           sourceMap: isDev,
-          includePaths: [
-            resolveApp('node_modules/normalize-scss/sass')
-          ]
+          sassOptions: {
+            includePaths: [
+              resolveApp('node_modules/normalize-scss/sass')
+            ]
+          }
         }
       },
       {
