@@ -14,13 +14,11 @@ This is an example webpack configuration for project kickoff
 ```
 vue-starter/
 ├── config/
-│   ├── helpers/
+│   ├── aliases/
 │   ├── loaders/
 │   ├── plugins/
-│   ├── index.js
-│   ├── webpack.config.dev.js
-│   └── webpack.config.prod.js
-├── dist/
+│   └── index.js
+├── helpers/
 └── src/
     ├── assets/
     ├── components/
@@ -29,7 +27,7 @@ vue-starter/
 ```
 
 ## Requirements
-* Node 10.16 or higher
+* Node 10 or higher
 
 ## Running
 

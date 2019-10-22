@@ -15,15 +15,8 @@ export default {
   },
   computed: {
     IconSVG() {
-      return () => import(`@/assets/icons/${this.iconId}.svg`)
+      return () => import(`@/assets/svg/${this.iconId}.svg`);
     }
   }
-}
+};
 </script>
-
-<style lang="scss">
-.icon {
-  width: 20px;
-  height: 20px;
-}
-</style>
