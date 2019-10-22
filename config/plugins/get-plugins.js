@@ -1,13 +1,20 @@
-const webpack = require('webpack'),
-      VueLoaderPlugin = require('vue-loader/lib/plugin'),
-      HtmlWebpackPlugin = require('./lib/html-webpack-plugin')
+const webpack = require('webpack');
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
-const createPlugins = isDev => {
-  return [].concat(
+const createPlugins = (isDev) => {
+  const plugins = [].concat(
     new webpack.ProgressPlugin(),
     new VueLoaderPlugin(),
-    HtmlWebpackPlugin()
-  )
-}
+    require('./lib/html-webpack-plugin')()
+  );
 
-module.exports = createPlugins
+  if (isDev) {
+    plugins.push(new CleanWebpackPlugin());
+    return plugins;
+  }
+
+  return plugins;
+};
+
+module.exports = createPlugins;

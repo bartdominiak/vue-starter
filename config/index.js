@@ -1,28 +1,38 @@
-const merge = require('webpack-merge'),
-      resolveApp = require('./helpers/resolve-app'),
-      getLoaders = require('./loaders/get-loaders'),
-      getPlugins = require('./plugins/get-plugins')
+const merge = require('webpack-merge');
+const resolveApp = require('../helpers/resolve-app');
 
-module.exports = env => {
-  const isDev = env === 'dev' || false
-  const baseConfig = {
+module.exports = (env) => {
+  const isDev = env === 'dev' || false;
+
+  const config = {
+    mode: isDev ? 'development' : 'production',
     entry: resolveApp('src/index.js'),
     output: {
       path: resolveApp('dist'),
       filename: '[name].[hash].js'
     },
     module: {
-      rules: getLoaders(isDev)
+      rules: require('./loaders/get-loaders')(isDev)
     },
-    plugins: getPlugins(isDev),
+    plugins: require('./plugins/get-plugins')(isDev),
     resolve: {
-      alias: {
-        'vue$': 'vue/dist/vue.runtime.esm.js',
-        '@': resolveApp('src'),
-        '~': resolveApp('src')
-      }
+      alias: require('./aliases/get-aliases')()
     }
+  };
+
+  if (isDev) {
+    const devServer = {
+      watch: true,
+      devServer: {
+        contentBase: resolveApp('dist'),
+        compress: true,
+        hot: true,
+        port: 4000
+      }
+    };
+
+    return merge(config, devServer);
   }
 
-  return merge(baseConfig, require(`./webpack.config.${env}`))
-}
+  return config;
+};

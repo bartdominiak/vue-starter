@@ -1,10 +1,8 @@
-const resolveApp = require('../../helpers/resolve-app'),
-      HtmlWebpackPlugin = require('html-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const resolveApp = require('../../../helpers/resolve-app');
 
-const HtmlPlugin = () => {
-  return new HtmlWebpackPlugin(
-    { template: resolveApp('src/index.html') }
-  )
-}
+const HtmlPlugin = () => new HtmlWebpackPlugin(
+  { template: resolveApp('src/index.html') }
+);
 
-module.exports = HtmlPlugin
+module.exports = HtmlPlugin;
