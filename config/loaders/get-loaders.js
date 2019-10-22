@@ -1,22 +1,17 @@
-const vueLoader = require('./lib/vue-loader'),
-      jsLoader = require('./lib/js-loader'),
-      scssLoader = require('./lib/scss-loader'),
-      svgLoader = require('./lib/svg-loader'),
-      eslintLoader = require('./lib/eslint-loader')
-
-const createLoaders = isDev => {
-  let loaders = [].concat(
-    vueLoader,
-    jsLoader,
-    scssLoader(isDev),
-    svgLoader
-  )
+const createLoaders = (isDev) => {
+  const loaders = [].concat(
+    require('./lib/vue-loader'),
+    require('./lib/js-loader'),
+    require('./lib/scss-loader')(isDev),
+    require('./lib/svg-loader')
+  );
 
   if (isDev) {
-    loaders.push(eslintLoader)
-    return loaders
+    loaders.push(require('./lib/eslint-loader'));
+    return loaders;
   }
-  return loaders
-}
 
-module.exports = createLoaders
+  return loaders;
+};
+
+module.exports = createLoaders;
