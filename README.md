@@ -5,7 +5,7 @@ This is an example webpack configuration for project kickoff
 * Clean and Flat folder structure
 * Contains only necessary stuff to run Vue (prevent overuse)
 * Seperated webpack loaders and plugins
-* JS, Vue, SVG, SCSS Support
+* JS (ES6), Vue, SVG, SCSS, Images Support
 * Base styles like `_variables.scss` and `_mixins.scss` are available in all components
 * Eslint
 * Autoprefixer
