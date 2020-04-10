@@ -1,0 +1,30 @@
+.button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+    min-width: 48px;
+
+    border: 0;
+    background: $black;
+    background: darken($white, 50%);
+    outline: none;
+
+    color: $white;
+
+    cursor: pointer;
+    text-decoration: none;
+    transition: $transition-base;
+    transition-property: background;
+
+    &__icon {
+        fill: $white;
+        width: 20px;
+        height: 20px;
+    }
+
+    &:hover,
+    &:focus {
+        background: $black;
+    }
+}
