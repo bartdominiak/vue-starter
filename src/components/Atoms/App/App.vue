@@ -1,25 +1,17 @@
 <template>
-  <MainLayout>
-    <base-button
-      tag="a"
-      href="http://github.com/bartdominiak"
-      target="_blank"
-    >
-      <GithubIcon class="button__icon" />
-    </base-button>
-  </MainLayout>
+  <main-layout>
+    <home-page />
+  </main-layout>
 </template>
 
 <script>
 import MainLayout from '@/components/Templates/MainLayout.vue'
-import BaseButton from '@/components/Atoms/Button/Button.vue'
-import GithubIcon from '@/assets/icons/github.svg'
+import HomePage from '@/components/Pages/HomePage.vue'
 
 export default {
   components: {
     MainLayout,
-    GithubIcon,
-    BaseButton
+    HomePage
   }
 }
 </script>
