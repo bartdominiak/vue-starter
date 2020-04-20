@@ -4,8 +4,8 @@
   },
   "scripts": {
     "start": "webpack-dev-server --config ./config --env dev",
-    "dev": "webpack --config ./config --env dev",
-    "build": "webpack --config ./config --env prod",
+    "dev": "webpack --progress --config ./config --env dev",
+    "build": "webpack --progress --config ./config --env prod",
     "lint": "eslint src/**/*.{js,vue} config/**/*.js"
   },
   "dependencies": {
@@ -15,7 +15,7 @@
     "babel-loader": "^8.1.0",
     "clean-webpack-plugin": "^3.0.0",
     "copy-webpack-plugin": "^5.1.1",
-    "css-loader": "^3.5.1",
+    "css-loader": "^3.5.2",
     "file-loader": "^6.0.0",
     "html-webpack-plugin": "^4.2.0",
     "node-sass": "^4.13.1",
@@ -25,14 +25,15 @@
     "postcss-preset-env": "^6.7.0",
     "postcss-url": "^8.0.0",
     "sass-loader": "^8.0.2",
-    "sass-resources-loader": "^2.0.1",
+    "sass-resources-loader": "^2.0.3",
     "vue": "^2.6.11",
     "vue-eslint-parser": "^7.0.0",
     "vue-loader": "^15.9.1",
+    "vue-router": "^3.1.6",
     "vue-style-loader": "^4.1.2",
     "vue-svg-loader": "^0.16.0",
     "vue-template-compiler": "^2.6.11",
-    "webpack": "^4.42.1",
+    "webpack": "^5.0.0-beta.13",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.10.3",
     "webpack-merge": "^4.2.2"
