@@ -1,14 +1,23 @@
 <template>
   <div class="main-layout">
-    <slot />
+    <base-header />
+
+    <main class="page-wrapper">
+      <slot />
+    </main>
+
+    <base-footer />
   </div>
 </template>
 
-<style lang="scss">
-  .main-layout {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+<script>
+import BaseHeader from '@/components/Organisms/Header/Header.vue'
+import BaseFooter from '@/components/Organisms/Footer/Footer.vue'
+
+export default {
+  components: {
+    BaseHeader,
+    BaseFooter
   }
-</style>
+}
+</script>

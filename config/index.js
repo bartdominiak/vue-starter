@@ -9,7 +9,8 @@ module.exports = (env) => {
     entry: resolveApp('src/index.js'),
     output: {
       path: resolveApp('dist'),
-      filename: '[name].[hash].js'
+      filename: '[name].[fullhash].js',
+      publicPath: '/'
     },
     module: {
       rules: require('./loaders/get-loaders')(isDev)

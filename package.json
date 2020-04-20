@@ -26,6 +26,7 @@
     "postcss-url": "^8.0.0",
     "sass-loader": "^8.0.2",
     "sass-resources-loader": "^2.0.3",
+    "serve": "^11.3.0",
     "vue": "^2.6.11",
     "vue-eslint-parser": "^7.0.0",
     "vue-loader": "^15.9.1",
@@ -33,7 +34,7 @@
     "vue-style-loader": "^4.1.2",
     "vue-svg-loader": "^0.16.0",
     "vue-template-compiler": "^2.6.11",
-    "webpack": "^5.0.0-beta.13",
+    "webpack": "git://github.com/webpack/webpack.git#dev-1",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.10.3",
     "webpack-merge": "^4.2.2"

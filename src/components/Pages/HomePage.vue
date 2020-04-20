@@ -4,17 +4,15 @@
     href="http://github.com/bartdominiak"
     target="_blank"
   >
-    <github-icon class="button__icon" />
+    click
   </base-button>
 </template>
 
 <script>
 import BaseButton from '@/components/Atoms/Button/Button.vue'
-import GithubIcon from '@/assets/icons/github.svg'
 
 export default {
   components: {
-    GithubIcon,
     BaseButton
   }
 }
