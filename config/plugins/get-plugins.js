@@ -5,7 +5,9 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const createPlugins = (isDev) => {
   const plugins = [].concat(
-    new CopyWebpackPlugin([ { from: 'public' } ]),
+    new CopyWebpackPlugin({
+      patterns: [ { from: 'public' } ]
+    }),
     new webpack.ProgressPlugin(),
     new VueLoaderPlugin(),
     require('./lib/html-webpack-plugin')()
